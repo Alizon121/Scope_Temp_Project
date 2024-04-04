@@ -17,8 +17,21 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 
 ***********************************************************************/
 
-// Your code here 
+function sandwichMaker(ingredient) {
+  let string = "One sandwich with tomato and "
 
+  function sandwich() {
+    return string + ingredient
+  } 
+  // let sandwich = topper(ingredient)
+return sandwich
+
+}
+
+const betterSandwich = sandwichMaker()
+
+
+console.log(betterSandwich())
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
