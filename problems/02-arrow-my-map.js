@@ -17,9 +17,20 @@ let result2 = arrowMyMap(['run', 'Forrest'], yell);
 console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 
 ***********************************************************************/
+const arrowMyMap = (array, cb) => {
 
-// Your code here 
+let result = [];
+  array.forEach(element => {
+  
+  result.push(cb(element))
+});
+return result
 
+}
+
+
+
+console.log(arrowMyMap([100, 25, 81, 64], Math.sqrt))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
