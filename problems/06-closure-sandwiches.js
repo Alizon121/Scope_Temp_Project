@@ -17,18 +17,18 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 
 ***********************************************************************/
 
-function sandwichMaker() {
-  let string = "One sandwich with tomato"
+function sandwichMaker(ingredient) {
+  let string = "One sandwich with tomato and "
 
-  function sandwich() {
+  return function sandwich() {
     return string + ingredient
   } 
   // let sandwich = topper(ingredient)
-return sandwich
+//   return sandwich
 
 }
 
-const betterSandwich = sandwichMaker()
+const betterSandwich = sandwichMaker("spinach")
 
 
 console.log(betterSandwich())
