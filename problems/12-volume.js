@@ -14,18 +14,26 @@ function returned by recVolume should continue to return the original volume.
 ***********************************************************************/
 
 function recVolume(height) {
+//   let count = 0;
+  
+//   while (count<3) {
   return function(width) {
     let area = height * width;
+    // count++;
     return function(length) {
+      // count++;
     return volume = area * length
-
+    }
   }
+// }
+// return volume
 }
-}
-let dimension = recVolume(3)
-console.log(dimension(2))
-console.log(dimension(3))
-/**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
+let dimension = recVolume(3);
+let twoDimension = dimension(4);
+let threeDimension = twoDimension(5)
+console.log(threeDimension)
+
+/**************DO NOT MODIFY 3ANYTHING UNDER THIS  LINE*****************/
 
 try {
   module.exports = recVolume;
