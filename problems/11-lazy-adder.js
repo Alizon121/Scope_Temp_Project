@@ -22,8 +22,20 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   fat-arrow function
 ***********************************************************************/
 
-// Your code here 
+function lazyAdder(firstNum) {
+  return function adder(secondNum) {
+    let midSum = firstNum + secondNum;
+    return function totaler(thirdNum) {
+      return midSum + thirdNum;
+    }
+  }
+}
 
+// Example 1:
+let firstAdd = lazyAdder(1);
+let secondAdd = firstAdd(2);
+// let sum = secondAdd(3);
+console.log(secondAdd); // prints 6
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
