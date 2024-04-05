@@ -20,19 +20,18 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 function sandwichMaker() {
   let string = "One sandwich with tomato"
 
- function order(ingredient) {
-  return string += " and " + ingredient
-  }
-return order
+  function sandwich() {
+    return string + ingredient
+  } 
+  // let sandwich = topper(ingredient)
+return sandwich
+
 }
 
-const sandwich = sandwichMaker()
-
-sandwich("spinach") // => "One sandwich with tomato and spinach"
-sandwich("jelly") // => "One sandwich with tomato and spinach and jelly"
-sandwich("bread") // => "One sandwich with tomato and spinach and jelly and bread"
+const betterSandwich = sandwichMaker()
 
 
+console.log(betterSandwich())
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
