@@ -18,7 +18,15 @@ divideByFive(50); // returns 10
 
 ***********************************************************************/
 
-// Your code here 
+function dynamicDivide(divisor) {
+return function divide(dividend) {
+return dividend / divisor;
+}
+}
+
+
+const halfer = dynamicDivide(2); // returns a function
+console.log(halfer(20)); // returns 10
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
