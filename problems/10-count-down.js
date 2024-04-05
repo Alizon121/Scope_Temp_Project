@@ -29,24 +29,29 @@ Example 4:
 ***********************************************************************/
 
 function countDownTimer(n) {
-  let count = n
-  function countDown () {
-    if (n > 0) return n = n - 1;
+  if (n === 0) return "Happy New Year!";
+  if (n > 0) {
+      return function countDown () {
+       return n-=1;
+       
+      }    
   }
-  if (n <= 0) return "Happy New Year!";
+  
+
+
 }
 
 // Example 1:
-  console.log(countDownTimer(0)); // prints "Happy New Year!"
+  // console.log(countDownTimer(0)); // prints "Happy New Year!"
 
 // Example 2:
-  let oneDay = countDownTimer(1); // returns a function
-  console.log(oneDay()); // prints "Happy New Year!"
+  // let oneDay = countDownTimer(1); // returns a function
+  // console.log(oneDay()); // prints "Happy New Year!"
 
 // // Example 3:
-//   let twoDays = countDownTimer(2); // returns a function
-//   console.log(twoDays()); // returns a function
-//   console.log(twoDays()); // prints "Happy New Year!"
+  let twoDays = countDownTimer(2); // returns a function
+  console.log(twoDays()); // returns a function
+  console.log(twoDays()); // prints "Happy New Year!"
 
 // // Example 4:
 //   let threeDays = countDownTimer(3); // returns a function
