@@ -15,8 +15,16 @@ console.log(twentyPercent([10, 20, 30])); // [ 8, 16, 24 ]
 
 ***********************************************************************/
 
-// Your code here 
+// parent function should take in a discount percent then return a function
+  let coupon = (discount) => {
+    return function discounter(prices) {
+      return prices.map((price) => price -  (price * discount))
+    }
+  }
+// return function should mutate an array of prices and return it
 
+let tenPercent = coupon(0.1);
+console.log(tenPercent([10, 20, 30])); // [ 9, 18, 27 ]
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
