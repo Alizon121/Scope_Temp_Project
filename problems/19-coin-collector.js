@@ -24,8 +24,26 @@ Example 3:
   console.log(threeCoins(10)); // prints [ 25, 5, 10 ]
 
 ***********************************************************************/
+const coinCollector = (numCoins) => {
+let arr = [];
 
-// Your code here 
+return function newCoin(coin) {
+  if (arr.length < numCoins) {
+  arr.push(coin)
+  }
+
+if (arr.length === numCoins) {
+return arr
+} else {
+return newCoin;
+}
+}
+}
+
+let twoCoins = coinCollector(2); // returns a function
+  twoCoins(25); // returns a function
+  console.log(twoCoins(10)); // prints [25, 10]
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

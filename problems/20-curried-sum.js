@@ -42,8 +42,46 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 - Come up with at least two situations (one per person) on when currying would
   be useful
 ***********************************************************************/
+// - Define an empty array, `numbers`.
+// - Define a function, `_curriedSum` that:
+//     - Closes over `numArgs` and `numbers`.
+//     - Takes a single postive integer greater than 0 as an argument.
+//       - If number is less than or equal to 0 return null
+//     - Appends this to the `numbers` array each time.
+//     - If `numbers.length === numArgs`, it sums the numbers in the array and
+//     returns the result.
+//     - Else, it returns itself.
+// - Returns `_curriedSum`.
 
-// Your code here 
+
+
+
+
+function curriedSum(numArgs) {
+let numbers = [];
+
+return function _curriedSum(n) {
+  if (n <= 0) {
+    return null;
+  }
+numbers.push(n)
+  if (numbers.length === numArgs) {
+
+
+    return numbers.reduce((acc, curr) => {
+     console.log(curr)
+      // acc + curr
+    }, numbers[0])
+  }
+}
+
+}
+
+const sum = curriedSum(4); // returns a function
+console.log(sum(5)); // returns a function
+console.log(sum(20)); // returns a function
+console.log(sum(30)) // returns a function
+console.log(sum(20)); // => returns 75
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
