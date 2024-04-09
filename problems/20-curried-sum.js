@@ -58,22 +58,24 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 
 
 function curriedSum(numArgs) {
+  if (numArgs <= 0) {
+    return null;
+  }
 let numbers = [];
 
 return function _curriedSum(n) {
-  if (n <= 0) {
-    return null;
-  }
 numbers.push(n)
   if (numbers.length === numArgs) {
-
-
     return numbers.reduce((acc, curr) => {
-     console.log(curr)
-      // acc + curr
-    }, numbers[0])
+      return acc + curr;
+    }, 0)
+  } else {
+    return _curriedSum;
   }
+
 }
+
+
 
 }
 
